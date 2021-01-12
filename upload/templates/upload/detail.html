@@ -1,0 +1,36 @@
+{% extends 'upload/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Images</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+</head>
+<body>
+
+	{% for Image in img %}
+			<div class="col-md-4">
+			</br>
+
+
+          <img src="{{media_url}}{{ Image.Main_Img.url }}" class="img-responsive" style="width:400px;height:200px;" />
+				</br>
+				</br>
+				</br>
+          <img src="{{ Image.Snd_Img.url }}" class="img-responsive" style="width:400px;height:200px;" />
+
+
+			</br>
+			</div>
+	{% endfor %}
+
+</body>
+</html>
+{% endblock  %}
